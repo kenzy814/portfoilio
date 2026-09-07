@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kenzy Mahmoud Mandour - FullStack .NET Developer Portfolio. Experienced in C#, ASP.NET Core MVC, Entity Framework Core, SQL Server, and C++.">
+  <meta name="keywords" content="Kenzy Mandour, FullStack Developer, .NET Developer, ASP.NET Core MVC, C#, Entity Framework Core, SQL Server, Portfolio">
+  <meta name="author" content="Kenzy Mahmoud Mandour">
+  <title>Kenzy Mandour | FullStack .NET Developer</title>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. Navigation Bar
+       ======================================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container">
+      <a href="#hero" class="nav-brand" aria-label="Kenzy Mandour Home">
+        <span class="brand-badge">&lt;KM/&gt;</span>
+        <span class="brand-name">Kenzy Mandour<span class="brand-dot">.</span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <div class="nav-cta">
+          <a href="#contact" class="btn btn-primary">Let's Talk</a>
+        </div>
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation drawer" aria-expanded="false" aria-controls="nav-menu">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop -->
+  <div class="mobile-backdrop" id="mobile-backdrop"></div>
+
+  <main>
+    <!-- ========================================================================
+         2. Hero Section
+         ======================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Hero Text Content -->
+          <div class="hero-content">
+            <div class="hero-status">
+              <span class="status-indicator"></span>
+              Available for Full-Time & Project Roles
+            </div>
+
+            <h1 class="hero-title">
+              Hi, I'm <span class="gradient-text">Kenzy Mahmoud Mandour</span>
+            </h1>
+
+            <div class="hero-subtitle">
+              <span>FullStack .NET Developer</span>
+              <span class="hero-subtitle-tag">C# &bull; ASP.NET Core</span>
+            </div>
+
+            <p class="hero-tagline">
+              Motivated Full-Stack Developer experienced in building web applications with C#, ASP.NET Core MVC, Entity Framework Core, SQL Server, and C++.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#contact" class="btn btn-primary">
+                <span>Contact Me</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="#projects" class="btn btn-secondary">
+                <span>View Projects</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M7 17l9.2-9.2M17 17V7H7"></path>
+                </svg>
+              </a>
+            </div>
+
+            <div class="hero-stats">
+              <div class="stat-item">
+                <span class="stat-value">.NET Core</span>
+                <span class="stat-label">Primary Stack</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">SQL Server</span>
+                <span class="stat-label">Database Design</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">Full-Stack</span>
+                <span class="stat-label">Web Architecture</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Abstract Visual (NO Profile Picture) -->
+          <div class="hero-visual">
+            <div class="tech-terminal">
+              <div class="terminal-header">
+                <div class="terminal-controls">
+                  <span class="terminal-dot dot-red"></span>
+                  <span class="terminal-dot dot-yellow"></span>
+                  <span class="terminal-dot dot-green"></span>
+                </div>
+                <div class="terminal-title">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                  <span>DeveloperController.cs</span>
+                </div>
+                <span class="terminal-badge">.NET 8.0</span>
+              </div>
+              <div class="terminal-body">
+<pre><code><span class="code-keyword">namespace</span> <span class="code-type">Portfolio.Controllers</span>
+{
+    [<span class="code-type">ApiController</span>]
+    [<span class="code-type">Route</span>(<span class="code-string">"api/[controller]"</span>)]
+    <span class="code-keyword">public class</span> <span class="code-type">DeveloperController</span> : <span class="code-type">ControllerBase</span>
+    {
+        <span class="code-comment">// FullStack .NET Specialist</span>
+        <span class="code-keyword">private readonly</span> <span class="code-type">ISoftwareStack</span> _stack;
+
+        <span class="code-keyword">public</span> <span class="code-method">DeveloperController</span>(<span class="code-type">ISoftwareStack</span> stack)
+        {
+            _stack = stack;
+        }
+
+        [<span class="code-type">HttpGet</span>(<span class="code-string">"profile"</span>)]
+        <span class="code-keyword">public</span> <span class="code-type">IActionResult</span> <span class="code-method">GetProfile</span>()
+        {
+            <span class="code-keyword">return</span> <span class="code-method">Ok</span>(<span class="code-keyword">new</span>
+            {
+                Name = <span class="code-string">"Kenzy Mahmoud Mandour"</span>,
+                Role = <span class="code-string">"FullStack .NET Developer"</span>,
+                CoreSkills = <span class="code-keyword">new</span>[] { <span class="code-string">"C#"</span>, <span class="code-string">"ASP.NET Core"</span>, <span class="code-string">"EF Core"</span>, <span class="code-string">"SQL Server"</span> },
+                Status = <span class="code-string">"Ready to Build"</span>
+            });
+        }
+    }
+}</code></pre>
+              </div>
+            </div>
+
+            <!-- Floating Tech Badges -->
+            <div class="floating-badge badge-top">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+              <span>Clean Architecture</span>
+            </div>
+
+            <div class="floating-badge badge-bottom">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              <span>Identity &amp; Auth</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         3. About & Education Section
+         ======================================================================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+            Background
+          </span>
+          <h2 class="section-title">About &amp; Education</h2>
+          <p class="section-subtitle">A glimpse into my foundational knowledge, passions, and multilingual capabilities.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Summary Card -->
+          <div class="glass-card about-summary-card">
+            <div>
+              <div class="card-title-group">
+                <div class="card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </div>
+                <h3>Professional Summary</h3>
+              </div>
+
+              <p class="about-summary-text">
+                Experienced in building web applications, designing databases, implementing CRUD operations, authentication/authorization, and developing OOP solutions. Expanding skills with a strong interest in software development and cybersecurity.
+              </p>
+            </div>
+
+            <!-- Key Strengths Grid -->
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <div class="highlight-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <div class="highlight-title">OOP &amp; MVC Design</div>
+                  <div class="highlight-desc">Maintainable codebases using robust design principles.</div>
+                </div>
+              </div>
+
+              <div class="highlight-item">
+                <div class="highlight-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="highlight-title">Database Design</div>
+                  <div class="highlight-desc">Efficient schema modeling with EF Core &amp; SQL Server.</div>
+                </div>
+              </div>
+
+              <div class="highlight-item">
+                <div class="highlight-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="highlight-title">Secure Authentication</div>
+                  <div class="highlight-desc">Role-based authorization and ASP.NET Identity.</div>
+                </div>
+              </div>
+
+              <div class="highlight-item">
+                <div class="highlight-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="highlight-title">Cybersecurity Passion</div>
+                  <div class="highlight-desc">Continuous focus on software security and protection.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education & Languages Column -->
+          <div class="about-side-col">
+            <!-- Education Card -->
+            <div class="glass-card">
+              <div class="card-title-group">
+                <div class="card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                  </svg>
+                </div>
+                <h3>Education</h3>
+              </div>
+
+              <div class="education-item">
+                <h4 class="education-degree">Computer Science &amp; AI</h4>
+                <div class="education-school">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <span>Benha University</span>
+                </div>
+                <p class="education-desc">
+                  Focused on computer science fundamentals, software engineering methodologies, artificial intelligence, data structures, and algorithms.
+                </p>
+              </div>
+            </div>
+
+            <!-- Languages Card -->
+            <div class="glass-card">
+              <div class="card-title-group">
+                <div class="card-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                  </svg>
+                </div>
+                <h3>Languages</h3>
+              </div>
+
+              <div class="languages-list">
+                <div class="language-row">
+                  <div class="language-info">
+                    <span class="language-name">Arabic</span>
+                  </div>
+                  <span class="language-tag">Native</span>
+                </div>
+
+                <div class="language-row">
+                  <div class="language-info">
+                    <span class="language-name">English</span>
+                  </div>
+                  <span class="language-tag">Fluent / C1</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         4. Experience Section
+         ======================================================================== -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            </svg>
+            Career Path
+          </span>
+          <h2 class="section-title">Experience</h2>
+          <p class="section-subtitle">Hands-on application development building enterprise-grade .NET solutions.</p>
+        </div>
+
+        <div class="experience-timeline">
+          <div class="experience-item">
+            <div class="timeline-marker"></div>
+            <div class="glass-card experience-card">
+              <div class="exp-header">
+                <div class="exp-role-group">
+                  <h3 class="exp-role">FullStack .NET Developer</h3>
+                  <div class="exp-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                    <span>Full-Stack Web Development &amp; Architecture</span>
+                  </div>
+                </div>
+                <span class="exp-period">Professional Track</span>
+              </div>
+
+              <p class="exp-description">
+                Developed ASP.NET Core MVC projects, implemented CRUD operations, authentication &amp; authorization, and worked with Entity Framework Core and SQL Server.
+              </p>
+
+              <div class="exp-bullet-list">
+                <div class="exp-bullet-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 11 12 14 22 4"></polyline>
+                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                  </svg>
+                  <span>Engineered complete MVC architectures, bridging server controllers, view models, and Razor frontend templates seamlessly.</span>
+                </div>
+                <div class="exp-bullet-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 11 12 14 22 4"></polyline>
+                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                  </svg>
+                  <span>Designed relational database schemas, migrations, and query optimizations using Entity Framework Core and Microsoft SQL Server.</span>
+                </div>
+                <div class="exp-bullet-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 11 12 14 22 4"></polyline>
+                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                  </svg>
+                  <span>Configured secure authentication pipelines and role-based authorization to protect business resources and user data.</span>
+                </div>
+              </div>
+
+              <div class="exp-tech-tags">
+                <span class="tech-tag">C#</span>
+                <span class="tech-tag">ASP.NET Core MVC</span>
+                <span class="tech-tag">Entity Framework Core</span>
+                <span class="tech-tag">SQL Server</span>
+                <span class="tech-tag">CRUD Operations</span>
+                <span class="tech-tag">Authentication &amp; Authorization</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         5. Projects Section (Card Layout)
+         ======================================================================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+            Featured Work
+          </span>
+          <h2 class="section-title">Highlighted Projects</h2>
+          <p class="section-subtitle">Real-world web solutions engineered with robust backends and clean design.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: FleetCare -->
+          <article class="glass-card project-card">
+            <div class="project-top">
+              <div class="project-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="1" y="3" width="15" height="13"></rect>
+                  <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                  <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                  <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                </svg>
+              </div>
+
+              <div class="project-actions">
+                <a href="#contact" class="project-link-btn" title="Inquire about FleetCare" aria-label="Inquire about FleetCare">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <h3 class="project-title">FleetCare</h3>
+
+            <p class="project-desc">
+              ASP.NET Core MVC fleet management system featuring CRUD operations, EF Core, SQL Server, Identity framework, and role-based authorization.
+            </p>
+
+            <div class="project-features">
+              <div class="feature-tag-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Role-based access control with ASP.NET Identity</span>
+              </div>
+              <div class="feature-tag-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Complete lifecycle tracking &amp; maintenance scheduling</span>
+              </div>
+              <div class="feature-tag-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Automated EF Core database migrations &amp; schema integrity</span>
+              </div>
+            </div>
+
+            <div class="project-tags">
+              <span class="tech-tag">ASP.NET Core MVC</span>
+              <span class="tech-tag">EF Core</span>
+              <span class="tech-tag">SQL Server</span>
+              <span class="tech-tag">ASP.NET Identity</span>
+            </div>
+          </article>
+
+          <!-- Project 2: Library Management System -->
+          <article class="glass-card project-card">
+            <div class="project-top">
+              <div class="project-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+              </div>
+
+              <div class="project-actions">
+                <a href="#contact" class="project-link-btn" title="Inquire about Library Management System" aria-label="Inquire about Library Management System">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <h3 class="project-title">Library Management System</h3>
+
+            <p class="project-desc">
+              Web project engineered using ASP.NET Core MVC with Entity Framework Core and SQL Server.
+            </p>
+
+            <div class="project-features">
+              <div class="feature-tag-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Comprehensive book cataloging and search indexing</span>
+              </div>
+              <div class="feature-tag-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Borrower management &amp; automated return tracking</span>
+              </div>
+              <div class="feature-tag-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Robust SQL Server relational structure with EF Core</span>
+              </div>
+            </div>
+
+            <div class="project-tags">
+              <span class="tech-tag">ASP.NET Core MVC</span>
+              <span class="tech-tag">EF Core</span>
+              <span class="tech-tag">SQL Server</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         6. Skills Section
+         ======================================================================== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+            Competencies
+          </span>
+          <h2 class="section-title">Skills &amp; Capabilities</h2>
+          <p class="section-subtitle">A balanced toolkit combining strong software engineering principles with collaborative agility.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Technical Skills -->
+          <div class="glass-card skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h3 class="skill-cat-title">Technical Skills</h3>
+            </div>
+
+            <div class="skill-pills-list">
+              <div class="skill-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 17l6-6-6-6M12 19h8"></path>
+                </svg>
+                <span>C#</span>
+              </div>
+
+              <div class="skill-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                </svg>
+                <span>ASP.NET Core MVC</span>
+              </div>
+
+              <div class="skill-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                </svg>
+                <span>Entity Framework Core</span>
+              </div>
+
+              <div class="skill-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 3h18v18H3zM9 9h6v6H9z"></path>
+                </svg>
+                <span>SQL Server</span>
+              </div>
+
+              <div class="skill-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                  <path d="M2 17l10 5 10-5"></path>
+                  <path d="M2 12l10 5 10-5"></path>
+                </svg>
+                <span>C++</span>
+              </div>
+
+              <div class="skill-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+                <span>OOP</span>
+              </div>
+
+              <div class="skill-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+                <span>HTML</span>
+              </div>
+
+              <div class="skill-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <path d="M12 3a9 9 0 0 0 9 9"></path>
+                </svg>
+                <span>CSS</span>
+              </div>
+
+              <div class="skill-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                </svg>
+                <span>Bootstrap</span>
+              </div>
+
+              <div class="skill-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="18" cy="18" r="3"></circle>
+                  <circle cx="6" cy="6" r="3"></circle>
+                  <path d="M13 6h3a2 2 0 0 1 2 2v7"></path>
+                  <line x1="6" y1="9" x2="6" y2="21"></line>
+                </svg>
+                <span>Git</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Soft Skills -->
+          <div class="glass-card skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon" style="background: rgba(139, 92, 246, 0.12); color: #c084fc;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <h3 class="skill-cat-title">Soft Skills</h3>
+            </div>
+
+            <div class="skill-pills-list">
+              <div class="skill-pill soft-skill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                  <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
+                <span>Problem Solving</span>
+              </div>
+
+              <div class="skill-pill soft-skill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+                <span>Communication</span>
+              </div>
+
+              <div class="skill-pill soft-skill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="8.5" cy="7" r="4"></circle>
+                  <line x1="20" y1="8" x2="20" y2="14"></line>
+                  <line x1="23" y1="11" x2="17" y2="11"></line>
+                </svg>
+                <span>Teamwork</span>
+              </div>
+
+              <div class="skill-pill soft-skill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span>Time Management</span>
+              </div>
+
+              <div class="skill-pill soft-skill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="23 4 23 10 17 10"></polyline>
+                  <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+                </svg>
+                <span>Adaptability</span>
+              </div>
+
+              <div class="skill-pill soft-skill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+                <span>Fast Learning</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         7. Contact Section & Footer
+         ======================================================================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            Get In Touch
+          </span>
+          <h2 class="section-title">Let's Connect</h2>
+          <p class="section-subtitle">Interested in collaborating or discussing full-stack .NET opportunities? Reach out directly!</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Direct Contact Details -->
+          <div class="glass-card contact-info-card">
+            <p class="contact-intro">
+              Whether you have an inquiry regarding full-stack software development, architectural consulting, or employment opportunities, I am always open to discussing new projects.
+            </p>
+
+            <div class="contact-methods">
+              <!-- Email Item -->
+              <div class="contact-method-item">
+                <div class="contact-method-left">
+                  <div class="contact-method-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="contact-method-label">Email Address</div>
+                    <a href="mailto:kenzy.mandour@outlook.com" class="contact-method-value">kenzy.mandour@outlook.com</a>
+                  </div>
+                </div>
+                <button class="copy-btn" data-copy="kenzy.mandour@outlook.com" data-label="Email" aria-label="Copy email address">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                  <span>Copy</span>
+                </button>
+              </div>
+
+              <!-- Phone Item -->
+              <div class="contact-method-item">
+                <div class="contact-method-left">
+                  <div class="contact-method-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="contact-method-label">Phone Number</div>
+                    <a href="tel:01157211428" class="contact-method-value">01157211428</a>
+                  </div>
+                </div>
+                <button class="copy-btn" data-copy="01157211428" data-label="Phone" aria-label="Copy phone number">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                  <span>Copy</span>
+                </button>
+              </div>
+
+              <!-- Location Item -->
+              <div class="contact-method-item">
+                <div class="contact-method-left">
+                  <div class="contact-method-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="contact-method-label">Location</div>
+                    <span class="contact-method-value">Benha, Egypt</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Links Group -->
+            <div class="social-links-group">
+              <a href="https://linkedin.com/in/kenzy-mandour" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn Profile">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+                <span>LinkedIn Profile</span>
+              </a>
+
+              <a href="mailto:kenzy.mandour@outlook.com" class="social-btn" aria-label="Direct Email">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>Direct Mail</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Interactive Message Form Card -->
+          <div class="glass-card contact-form-card">
+            <form class="contact-form" id="contactForm">
+              <div class="form-group">
+                <label for="name" class="form-label">Full Name *</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="e.g. John Doe" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Email Address *</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="e.g. john@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="subject" class="form-label">Subject</label>
+                <input type="text" id="subject" name="subject" class="form-input" placeholder="Project Inquiry / Job Opportunity">
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">Message *</label>
+                <textarea id="message" name="message" class="form-textarea" placeholder="Hello Kenzy, I'd like to discuss..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <span>Send Message</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+
+              <div id="formStatus" class="form-status-msg" role="status"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       Footer
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="footer-brand-title">Kenzy Mahmoud Mandour</span>
+          <span class="footer-copy">&copy; <span id="currentYear"></span> &bull; FullStack .NET Developer &bull; All Rights Reserved.</span>
+        </div>
+
+        <button class="back-to-top" id="backToTop" aria-label="Scroll back to top">
+          <span>Back to Top</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Floating Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- Vanilla JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
